@@ -2,23 +2,41 @@ import 'package:flutter/material.dart';
 
 class W3 extends StatelessWidget {
   const W3({super.key});
-  //color: Theme.of(context).primaryColor,
-  // color: Theme.of(context).colorScheme.inversePrimary,
-  // container margin: const EdgeInsets.all(10),
-  // container padding: const EdgeInsets.all(10),
+
   @override
   Widget build(BuildContext context) {
-    return const Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Text('0', key: Key('W3Value')),
-        IconButton(
-          onPressed: null,
-          icon: Icon(Icons.add),
-          key: Key('W3Add'),
-        ),
-        IconButton(onPressed: null, icon: Icon(Icons.remove), key: Key('W3Sub'))
-      ],
+    return Container(
+      color: Theme.of(context).primaryColor,
+      margin: const EdgeInsets.all(10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Container(
+            padding: const EdgeInsets.all(10),
+            color: Theme.of(context).colorScheme.inversePrimary,
+            child: Text(
+              '0',
+              key: const Key('W3Value'),
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.all(10),
+            color: Theme.of(context).colorScheme.inversePrimary,
+            child: Column(
+              children: [
+                IconButton(
+                    onPressed: () {},
+                    icon: const Icon(Icons.add),
+                    key: const Key('W3Add')),
+                IconButton(
+                    onPressed: () {},
+                    icon: const Icon(Icons.remove),
+                    key: const Key('W3Sub'))
+              ],
+            ),
+          )
+        ],
+      ),
     );
     ;
   }

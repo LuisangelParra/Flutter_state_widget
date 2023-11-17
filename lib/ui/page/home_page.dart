@@ -21,14 +21,23 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
-      body: const Center(
+      body: Center(
           child: Column(
         children: [
-          IconButton(
-              onPressed: null, icon: Icon(Icons.refresh), key: Key('Refresh')),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[W1(), W2(), W3()],
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.refresh),
+                  key: const Key('Refresh')),
+            ],
+          ),
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: <Widget>[W1(), W2(), W3()],
+            ),
           ),
         ],
       )),
