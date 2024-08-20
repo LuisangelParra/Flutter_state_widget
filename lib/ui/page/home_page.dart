@@ -14,6 +14,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  // para obtener un valor con un solo decimal, correctamente redondeado
+  // y asignarlo a un string, se puede usar:
+  // double.parse(_value.toStringAsFixed(1));
   @override
   Widget build(BuildContext context) {
     return Scaffold(
