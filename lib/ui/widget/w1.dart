@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 class W1 extends StatelessWidget {
   const W1({super.key});
   //final VoidCallback onAdd; // call like this: onPressed: () => onAdd(),
+  // if you want to send parameters
+  // final Function(double) onAdd
   //final double value;
   @override
   Widget build(BuildContext context) {
