@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class W1 extends StatelessWidget {
   const W1({super.key});
-  //final Function onAdd;
+  //final VoidCallback onAdd; // call like this: onPressed: () => onAdd(),
   //final double value;
   @override
   Widget build(BuildContext context) {
