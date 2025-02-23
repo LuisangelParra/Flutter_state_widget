@@ -1,11 +1,24 @@
 import 'package:flutter/material.dart';
 
-class W1 extends StatelessWidget {
-  const W1({super.key});
-  //final VoidCallback onAdd; // call like this: onPressed: () => onAdd(),
-  // if you want to send parameters
-  // final Function(double) onAdd
-  //final double value;
+class Counter extends StatelessWidget {
+  const Counter({
+    super.key,
+    required this.valueOfChange,
+    required this.counter,
+    required this.onCounterUpdated,
+  });
+
+  final num valueOfChange;
+  final num counter;
+  final ValueChanged<num> onCounterUpdated; // Callback para actualizar el valor
+
+  void _increment() {
+    onCounterUpdated(counter + valueOfChange);
+  }
+  void _decrement() {
+    onCounterUpdated(counter - valueOfChange);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,9 +30,9 @@ class W1 extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(10),
             color: Theme.of(context).colorScheme.inversePrimary,
-            child: const Text(
-              '0',
-              key: Key('W1Value'),
+            child: Text(
+              counter.toStringAsFixed(1),
+              key: const Key('W1Value'),
             ),
           ),
           Container(
@@ -28,11 +41,11 @@ class W1 extends StatelessWidget {
             child: Column(
               children: [
                 IconButton(
-                    onPressed: () {},
+                    onPressed: _increment,
                     icon: const Icon(Icons.add),
                     key: const Key('W1Add')),
                 IconButton(
-                    onPressed: () {},
+                    onPressed: _decrement,
                     icon: const Icon(Icons.remove),
                     key: const Key('W1Sub'))
               ],

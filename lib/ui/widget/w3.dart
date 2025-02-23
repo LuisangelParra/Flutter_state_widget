@@ -14,9 +14,9 @@ class W3 extends StatelessWidget {
           Container(
             padding: const EdgeInsets.all(10),
             color: Theme.of(context).colorScheme.inversePrimary,
-            child: Text(
+            child: const Text(
               '0',
-              key: const Key('W3Value'),
+              key: Key('W3Value'),
             ),
           ),
           Container(
@@ -38,6 +38,5 @@ class W3 extends StatelessWidget {
         ],
       ),
     );
-    ;
   }
 }
